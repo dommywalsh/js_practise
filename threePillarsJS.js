@@ -1,9 +1,3 @@
-// addFavoriteBook("A Song of Ice and Fire");
-// addFavoriteBook("The Great Gatsby");
-// addFavoriteBook("Crime & Punishment");
-// addFavoriteBook("Great Expectations");
-// addFavoriteBook("You Don't Know JS");
-
 class Bookshelf {
     constructor() {
       this.favoriteBooks = []
@@ -36,9 +30,6 @@ const BOOK_API = "https://some.url/api";
 
 let myBooks = new Bookshelf();
 loadBooks(myBooks)
-
-// myBooks.favoriteBooks
-// console.log(myBooks.favoriteBooks)
 
 function fakeAjax(url,cb) {
 	setTimeout(function fakeLoadingDelay(){
