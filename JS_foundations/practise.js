@@ -18,4 +18,3 @@ friends[0] = "joe"
 let numbers = [1, 34, 12, 57]
 
 console.log(numbers.sort((a, b) => a > b ? -1 : 1));
-
