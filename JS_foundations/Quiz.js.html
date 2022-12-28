@@ -107,6 +107,10 @@
       button.setAttribute("disabled", "")
     }
 
+    // function disable(button) {
+    //   button.setAttribute("disabled", "")
+    // }
+
     const enable = (button) => {
       button.removeAttribute("disabled")
     }
@@ -120,6 +124,29 @@
 
 
     // TODO 6A: Use a for loop to add a click event listener to each of the optionButtons
+
+    for (let button of optionButtons) {
+      button.addEventListener('click', (event) => {
+        console.log(button.innerText);
+        explanation.textContent = fact.explanation;
+
+        for (let internalButton of optionButtons) {
+          disable(internalButton);
+        }
+
+        if (button.innerText === fact.answer.toString()) {
+          // console.log('right answer')
+          button.classList.add('correct')
+        } else {
+          // console.log('wrong answer')
+          button.classList.add('incorrect')
+        }
+
+      })
+    }
+
+
+
             // TODO 6B: Within the event handler function, display the fact's explanation by setting the text of the explanation element
 
 
