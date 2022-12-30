@@ -120,7 +120,14 @@
     function getBreedFromURL(url) {
         // The string method .split(char) may come in handy
         // Try to use destructuring as much as you can
-
+        let splitUrl = url.split('/');
+        const [,,,,breed] = splitUrl;
+        if (breed.includes('-')){
+         let [secondName, firstName] = breed.split('-')
+         return `${firstName} ${secondName}`
+        } else {
+          return breed
+        };
     }
 
 
