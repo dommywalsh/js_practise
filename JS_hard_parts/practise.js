@@ -46,14 +46,29 @@
 //   }
 // }
 
-const count = 5;
-let counter = 0;
+// const count = 5;
+// let counter = 0;
 
-function increment(){
-  if (++counter <= count){
+// function increment(){
+//   if (++counter <= count){
+//     console.log(counter);
+//   }
+// }
+
+// increment();
+// increment();
+
+function counter(){
+  let counter = 0;
+  function incrementCounter(){
+    counter ++
     console.log(counter);
   }
+  return incrementCounter;
 }
 
-increment();
-increment();
+const myNewFunction = counter();
+
+myNewFunction();
+
+myNewFunction();
