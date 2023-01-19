@@ -58,17 +58,54 @@
 // increment();
 // increment();
 
-function counter(){
-  let counter = 0;
-  function incrementCounter(){
-    counter ++
-    console.log(counter);
-  }
-  return incrementCounter;
+// function counter(){
+//   let counter = 0;
+//   function incrementCounter(){
+//     counter ++
+//     console.log(counter);
+//   }
+//   return incrementCounter;
+// }
+
+// const myNewFunction = counter();
+
+// myNewFunction();
+
+// myNewFunction();
+
+// function display(data){
+//   console.log(data);
+// }
+
+// const futureData = fetch('https://twitter.com/will/tweets/1');
+// futureData.then(display);
+
+// const myObject = {};
+
+// myObject.name = "Dom"
+// myObject.score = 3;
+
+// console.log(myObject);
+// console.log(myObject.score);
+
+// myObject.increment = function(){
+//   myObject.score ++
+// }
+
+// myObject.increment();
+
+// console.log(myObject.score);
+
+function userCreator(name, score){
+  this.name = name;
+  this.score = score;
 }
 
-const myNewFunction = counter();
+userCreator.prototype.increment = function(){this.score++;};
+userCreator.prototype.login = function(){ console.log("login");};
 
-myNewFunction();
+const user1 = new userCreator('dom', '5');
 
-myNewFunction();
+user1.increment();
+
+console.log(user1.score);
