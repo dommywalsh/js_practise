@@ -2,11 +2,11 @@
 
 //1st line = hash bang that tells us to interepret this file in the NODE enviornment
 
-import open from 'open'
+import open from '../server/node_modules/open'
 import fetch from 'node-fetch'
 import yargs from 'yargs'
 
-// install 3 modules 
+// install 3 modules
 
 // parse env vars
 const { argv } = yargs(process.argv)
